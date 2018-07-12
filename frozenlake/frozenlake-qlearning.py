@@ -20,9 +20,9 @@ import math
 
 env = gym.make("FrozenLake-v0")
 
-num_episodes = 2000
+num_episodes = 3000
 gamma = 0.99
-learning_rate = 0.85
+learning_rate = 0.90
 
 # initialize the Q table
 Q = np.zeros([16, 4])
