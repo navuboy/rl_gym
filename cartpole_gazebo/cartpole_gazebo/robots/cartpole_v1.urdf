@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<robot name="cartpole">
+
+  <link
+    name="pole">
+    <inertial>
+      <origin
+        xyz="5.1965E-17 -6.97039984513016E-10 0.25293"
+        rpy="0 0 0" />
+      <mass
+        value="0.23243" />
+      <inertia
+        ixx="0.00438754518582167"
+        ixy="-1.25253237813376E-10"
+        ixz="-2.23831229550661E-18"
+        iyy="0.00438769663550614"
+        iyz="-2.85547006919033E-11"
+        izz="1.79012590972362E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartpole_gazebo/meshes/pole.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartpole_gazebo/meshes/pole.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+<joint name="cart_pole" type="continuous">
+    <origin xyz="0 0 0.030" rpy="0 0 0"></origin>
+    <parent link="cart"></parent>
+    <child link="pole"></child>
+    <axis xyz="0 -1 0"></axis>
+    <limit effort="30" lower="-0.785398" upper="0.785398" velocity="7.0"></limit>
+    <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<link
+    name="cart">
+    <inertial>
+      <origin
+        xyz="-9.5599E-18 1.33425381707038E-17 0.00084171"
+        rpy="0 0 0" />
+      <mass
+        value="0.11377" />
+      <inertia
+        ixx="4.1669682348633E-05"
+        ixy="-1.04625761823806E-20"
+        ixz="5.44975644882897E-21"
+        iyy="0.0001144665328628"
+        iyz="1.214627773683E-21"
+        izz="0.000111738946564849" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartpole_gazebo/meshes/cart.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartpole_gazebo/meshes/cart.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="stand_cart" type="prismatic">
+    <origin xyz="0 0.0 0.150" rpy="0 0 0"></origin>
+    <parent link="stand"></parent>
+    <child link="cart"></child>
+    <axis xyz="1 0 0"></axis>
+    <limit effort="30" lower="-0.5" upper="0.5" velocity="7.0"></limit>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+
+  <link
+    name="stand">
+    <inertial>
+      <origin
+        xyz="-2.879E-16 3.75073144169983E-17 0.078463"
+        rpy="0 0 0" />
+      <mass
+        value="1.0356" />
+      <inertia
+        ixx="0.00182223142735174"
+        ixy="4.12334734934176E-19"
+        ixz="-9.25906326235474E-18"
+        iyy="0.097952048263061"
+        iyz="-8.11897527850453E-19"
+        izz="0.0962757383045765" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartpole_gazebo/meshes/stand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartpole_gazebo/meshes/stand.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+ <link name="world"/>
+
+ <joint name="grounding" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"></origin>
+    <parent link="world"/>
+    <child link="stand"/>
+  </joint>
+
+
+  <gazebo>
+  <!-- <dynamics damping="10" friction="100.0"/> -->
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+  </plugin>
+
+<!--   <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+          <robotNamespace>/cartpole</robotNamespace>
+          <jointName>cart_pole</jointName>
+          <updateRate>10.0</updateRate>
+          <alwaysOn>true</alwaysOn>
+  </plugin> -->
+
+  </gazebo>
+
+
+
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="stand_cart">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="cart_pole">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  </robot>

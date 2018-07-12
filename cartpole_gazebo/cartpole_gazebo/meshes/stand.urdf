@@ -1,0 +1,43 @@
+<robot
+  name="stand">
+  <link
+    name="stand">
+    <inertial>
+      <origin
+        xyz="-2.879E-16 3.75073144169983E-17 0.078463"
+        rpy="0 0 0" />
+      <mass
+        value="1.0356" />
+      <inertia
+        ixx="0.00182223142735174"
+        ixy="4.12334734934176E-19"
+        ixz="-9.25906326235474E-18"
+        iyy="0.097952048263061"
+        iyz="-8.11897527850453E-19"
+        izz="0.0962757383045765" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stand/meshes/stand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stand/meshes/stand.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

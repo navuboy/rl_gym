@@ -1,0 +1,43 @@
+<robot
+  name="cart">
+  <link
+    name="cart">
+    <inertial>
+      <origin
+        xyz="-9.5599E-18 1.33425381707038E-17 0.00084171"
+        rpy="0 0 0" />
+      <mass
+        value="0.11377" />
+      <inertia
+        ixx="4.1669682348633E-05"
+        ixy="-1.04625761823806E-20"
+        ixz="5.44975644882897E-21"
+        iyy="0.0001144665328628"
+        iyz="1.214627773683E-21"
+        izz="0.000111738946564849" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cart/meshes/cart.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cart/meshes/cart.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

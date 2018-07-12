@@ -1,0 +1,43 @@
+<robot
+  name="pole">
+  <link
+    name="pole">
+    <inertial>
+      <origin
+        xyz="5.1965E-17 -6.97039984513016E-10 0.25293"
+        rpy="0 0 0" />
+      <mass
+        value="0.23243" />
+      <inertia
+        ixx="0.00438754518582167"
+        ixy="-1.25253237813376E-10"
+        ixz="-2.23831229550661E-18"
+        iyy="0.00438769663550614"
+        iyz="-2.85547006919033E-11"
+        izz="1.79012590972362E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pole/meshes/pole.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pole/meshes/pole.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
