@@ -2,9 +2,9 @@
 Implementation of Proximal Policy Optimization(PPO) for classic cartpole environment using tensorflow. 
 
 ## Dependencies
-Python: 3.5
-Tensorflow: 1.4 
-Gym: 0.9.3 
+- Python: 3.5
+- Tensorflow: 1.4 
+- Gym: 0.9.3 
 
 ## Gym environment
 
