@@ -17,7 +17,9 @@ Action==Discrete
 **Train experts**
  
 python3 run_ppo.py 
-
+<p align= "center">
+  <img src="images/training_ppo.gif/">
+</p>
 
 **Test trained policy** 
 
