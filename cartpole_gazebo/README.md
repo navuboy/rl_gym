@@ -1,4 +1,4 @@
-### 3D CartPole-v0 in Gazebo environment.
+### 3D CartPole in Gazebo environment.
 
 <p align= "center">
   <img src="/images/pg2.gif/">
