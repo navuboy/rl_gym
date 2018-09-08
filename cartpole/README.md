@@ -1,4 +1,4 @@
-#Cartpole balancing using Reinforcement Learning
+### Cartpole balancing using Reinforcement Learning
 
 ![Cartpole](../images/cartpole.gif)
 
