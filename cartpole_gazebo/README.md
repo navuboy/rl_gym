@@ -1,7 +1,7 @@
-### 3D CartPole-vO in Gazebo environment.
+### 3D CartPole-v0 in Gazebo environment.
 
 <p align= "center">
-  <img src="walker_controller/src/training_1.gif/">
+  <img src="/images/cartpole-pg-gazebo.gif/">
 </p>
 
  
