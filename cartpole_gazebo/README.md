@@ -1,4 +1,4 @@
-## 3D CartPole in Gazebo environment.
+## 3D CartPole environment in Gazebo.
 
 ### Dependencies:
 - Ubuntu 16.04 (http://releases.ubuntu.com/16.04/)
