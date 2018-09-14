@@ -11,8 +11,7 @@
 ### File setup:
 - ***cartpole_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file -      (**cartpole_gazebo.launch**)
 
-- ***cartpole_controller*** contains the reinforcement learning implementation of ****Policy Gradient algorithm**** for custom cartpole - (**pg.py**)
-
+- ***cartpole_controller*** contains the reinforcement learning implementation of ****Policy Gradient algorithm**** for custom cartpole - (**Note: run pg.py**)
 
 Policy Gradient for custom designed cartpole model in gazebo environment.
 <p align= "center">
