@@ -2,8 +2,6 @@
 This code uses Policy gradient algorithm called REINFORCE to solve
 OpenAI Gym's CartPole balancing problem.
 
-Find evaluation at : https://gym.openai.com/evaluations/eval_MkKDu7AS1mcfffi7LWeg
-
 '''
 
 import tensorflow as tf
