@@ -1,6 +1,6 @@
 # **Reinforcement Learning for OpenAI gym's environments**
 
-- This repository contains my solution for the OpenAI Gym problems on Reinforcement Learning.
+- This repository contains my solution for several of the OpenAI gym's problems on Reinforcement Learning.
 
 <p align= "left">
   <img src="/images/cartpole.gif/" width="400" height="300" hspace="30">
