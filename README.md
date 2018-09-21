@@ -3,10 +3,10 @@
 - This repository contains my solution for several of the OpenAI gym's problems on Reinforcement Learning.
 
 <p align= "left">
-  <img src="/images/cartpole.gif/" width="400" height="300" hspace="30">
-  <img src="/images/example.gif/" width="400" height="300">
-  <img src="/images/breakout-v0.gif/" width="350" height="300" hspace="40">
-  <img src="/images/mountain-car-v0.gif/" width="400" height="350">
+  <img src="/images/cartpole.gif/" width="300" height="200" hspace="90">
+  <img src="/images/example.gif/" width="300" height="200">
+  <img src="/images/breakout-v0.gif/" width="300" height="300" hspace="90">
+  <img src="/images/mountain-car-v0.gif/" width="300" height="200">
 </p>
 
 
