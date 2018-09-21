@@ -10,7 +10,7 @@
 </p>
 
 
-- The ***cartpole_gazebo*** contains custom designed cartpole model in Gazebo simulation environment.
+- The **cartpole_gazebo** contains custom designed cartpole model in Gazebo simulation environment.
 
 <p align= "center">
   <img src="/images/pg2.gif/" width="400" height="400">
