@@ -15,16 +15,17 @@ Action: Discrete
 ## Implementation:
 
 **Train experts**
- 
-python3 run_ppo.py 
+ ```
+python3 run_ppo.py
+```
 <p align= "center">
   <img src="images/training_ppo.gif/">
 </p>
 
 **Test trained policy** 
-
+```
 python3 test_policy.py --alg=ppo 
-
+```
   
   
 
