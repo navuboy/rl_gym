@@ -5,7 +5,7 @@
 <p align= "left">
   <img src="/images/cartpole.gif/" width="300" height="200" hspace="90">
   <img src="/images/example.gif/" width="300" height="200">
-  <img src="/images/breakout-v0.gif/" width="300" height="300" hspace="90">
+  <img src="/images/breakout-v0.gif/" width="250" height="250" hspace="90">
   <img src="/images/mountain-car-v0.gif/" width="300" height="200">
 </p>
 
