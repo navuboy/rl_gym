@@ -26,9 +26,11 @@ python3 run_ppo.py
 ```
 python3 test_policy.py --alg=ppo 
 ```
+**Plot(s)**
+
 | ![](./images/ppo_train_test.png) | ![](./images/ppo_train_test_legend.png) |  
 | :---: | :---: |  
-| Training and Testing results for PPO | legend | 
+| <b> Training and Testing results for PPO </b> | 
   
 
 
