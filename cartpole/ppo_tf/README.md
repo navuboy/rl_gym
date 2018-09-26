@@ -26,7 +26,9 @@ python3 run_ppo.py
 ```
 python3 test_policy.py --alg=ppo 
 ```
-  
+| ![](./images/ppo_train_test.png) | ![](./images/ppo_train_test_legend.png) |  
+| :---: | :---: |  
+| Training and Teasting results for PPO | legend | 
   
 
 
