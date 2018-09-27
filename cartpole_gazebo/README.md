@@ -13,7 +13,7 @@
 
 - ***cartpole_controller*** contains the reinforcement learning implementation of ****Policy Gradient algorithm**** for custom cartpole environment.
 
-Policy Gradient for custom designed cartpole model in gazebo environment.
+#### Policy Gradient for custom designed cartpole model in gazebo environment.
 <p align= "center">
   <img src="/images/pg2.gif/">
 </p>
