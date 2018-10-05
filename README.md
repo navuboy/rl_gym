@@ -1,4 +1,4 @@
-# **Reinforcement Learning for OpenAI gym's environments**
+# **Reinforcement Learning for OpenAI gym environments**
 
 - This repository contains my solution for several of the OpenAI gym's problems on Reinforcement Learning.
 
