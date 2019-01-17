@@ -7,9 +7,6 @@ from os import path
 import random
 from collections import deque
 
-#####################################################################################################
-## Algorithm
-
 # Deep Q-Networks (DQN)
 # An off-policy action-value function based approach (Q-learning) that uses epsilon-greedy exploration
 # to generate experiences (s, a, r, s'). It uses minibatches of these experiences from replay memory
@@ -18,9 +15,6 @@ from collections import deque
 # A slowly-changing "target" Q network, as well as gradient norm clipping, are used to improve
 # stability and encourage convergence.
 # Parameter updates are made via Adam.
-
-#####################################################################################################
-## Setup
 
 env_to_use = 'LunarLander-v2'
 
@@ -82,9 +76,6 @@ info['params'] = dict(
 	epsilon_decay_length = epsilon_decay_length,
 	epsilon_decay_exp = epsilon_decay_exp
 )
-
-#####################################################################################################
-## Tensorflow
 
 tf.reset_default_graph()
 
@@ -157,8 +148,7 @@ train_op = tf.train.AdamOptimizer(lr*lr_decay**episodes).minimize(loss)
 sess = tf.Session()	
 sess.run(tf.global_variables_initializer())
 
-#####################################################################################################
-## Training
+## Training starts here
 
 total_steps = 0
 experience = deque(maxlen=replay_memory_capacity)
